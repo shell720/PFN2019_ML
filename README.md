@@ -7,5 +7,4 @@ git管理が遅すぎてどこに苦戦したかを忘れているところが�
 でも引数とコンストラクトの変数名をごっちゃにしてバグに悩まされていた気がする。
 
 
-_kadaiは途中で実装がめちゃくちゃになったので諦めた跡です。
-この課題を通してclassへの理解が深まった。
+/src/_kadai are the programs that messed up and throwed away in the middle, and hen re-written anew. /src/kadai are the official code.
