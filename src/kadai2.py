@@ -18,7 +18,7 @@ class Aggregate(object): #継承をしたいのでobject追加
         return h_output
 
 class GNN(Aggregate):
-    def __init__(self,vertex,W,a,b,y):
+    def __init__(self,vertex,W,a,b,y=0):
         super().__init__(vertex,W)
         #パラメータa,b 正解ラベル
         self.a,self.b,self.y= a,b,y

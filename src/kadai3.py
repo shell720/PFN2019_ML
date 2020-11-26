@@ -9,13 +9,14 @@ from kadai2 import GNN
 #訓練データと検証データのそれぞれに対して学習結果を表示
 
 class Input_data:
-    def __init__(self,idx):
+    def __init__(self,idx, dirName="train"):
         self.idx=idx
+        self.dir=dirName
     def input_AdjacencyMatrix(self):
         #i番目の隣接行列情報を読み込む
         tmp=os.getcwd()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        path="../datasets/train/"+str(self.idx)+"_graph.txt"
+        path="../datasets/"+self.dir+"/"+str(self.idx)+"_graph.txt"
         with open(path) as f:
             n                = int(f.readline())
             adjacency_matrix = np.zeros((n,n))
@@ -28,7 +29,7 @@ class Input_data:
     def input_label(self):
         tmp=os.getcwd()
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        path="../datasets/train/"+str(self.idx)+"_label.txt"
+        path="../datasets/"+self.dir+"/"+str(self.idx)+"_label.txt"
         with open(path) as f:
             y=int(f.readline())
         os.chdir(tmp)
